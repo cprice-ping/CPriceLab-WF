@@ -53,5 +53,5 @@ https://${PF_BASE_URL}/idp/startSSO.ping?PartnerSpId=Dummy-SAML
 **SAML -- PingOne for Enterprise**  
 https://${PF_BASE_URL}/idp/startSSO.ping?PartnerSpId=Dummy-SAML
 
-**WSFed -- AzureAD \ O365**
+**WSFed -- AzureAD \ O365**  
 https://login.microsoftonline.com?whr=cpricedomain.net
