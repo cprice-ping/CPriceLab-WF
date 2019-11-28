@@ -1,6 +1,9 @@
-This profile provides a base configuration for PingFederate.
+This profile is the configuration for CPriceLab - Workforce use cases
 
-It is designed to be used in conjunction with my PD-Base Profile (https://github.com/cprice-ping/PD-Base).
+It is designed to be used in conjunction with my PD-Base Profile (https://github.com/cprice-ping/PD-Base), with PD being used for:  
+* OAuth Clients
+* OAuth Persistant Grants
+* Authentication Sessions
 
 ## Deployment
 * Copy the `docker-compose.yaml` and `env_vars` files to a folder
@@ -19,7 +22,6 @@ This configuration includes:
 
 ### Adapters
 * HTML Form
-* HTML Form with LIP
 * Identifier-First (Passwordless)
 * PingID
 
@@ -31,40 +33,25 @@ For this Profile, you can place the `base64` encoded text from a `pingid.propert
 
 ### Authentication Policy
 Extended Property Selector
-  * Basic (HTML Form)
-  * Enhanced (HTML Form with LIP)
-  * MFA (Enhanced --> PingID)
+  * Basic (Kerb \ HTML Form --> PingID)
   * Passwordless (ID-First --> PingID)
 
 The Authentication Experience is controlled by setting the `Extended Properties` on the Application.  
 
 Authentication API
-* HTML Form with LIP --> AuthN API Explorer  
+* HTML Form --> AuthN API Explorer  
 
 ### Extended Properties
-* `Basic` (Plain HTML Form)
-* `Enhanced` (HTML Form with LIP -- Google & Facebook buttons [not configured])
-* `MFA` (HTML Form with LIP --> PingID adapter)
+* `Basic` (Kerb \ HTML Form --> PingID)
 * `Passwordless` (ID-First --> PingID)
 * _Anything Else_ (AuthN API Explorer)
 
 ### Applications
-Two applications are pre-wired:
-
-**SAML:**  
+**SAML -- Generic App**  
 https://${PF_BASE_URL}/idp/startSSO.ping?PartnerSpId=Dummy-SAML
 
-**OAuth \ OIDC:**  
-`Issuer` == ${PF_BASE_URL}  
+**SAML -- PingOne for Enterprise**  
+https://${PF_BASE_URL}/idp/startSSO.ping?PartnerSpId=Dummy-SAML
 
-`client_id` == PingLogon  
-`client_secret` == 2FederateM0re
-
-**Introspect**  
-`client_id` == PingIntrospect  
-`client_secret` == 2FederateM0re
-
-### Users
-If you are using the BASELINE PingDirectory image, the credentials you can use for these applications are:
-
-`user.[0-4]` / `2FederateM0re`
+**WSFed -- AzureAD \ O365**
+https://login.microsoftonline.com?whr=cpricedomain.net
