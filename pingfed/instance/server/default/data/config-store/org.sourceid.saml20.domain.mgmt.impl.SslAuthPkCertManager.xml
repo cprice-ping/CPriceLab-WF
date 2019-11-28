@@ -4,4 +4,5 @@
     <con:map name="https://httpbin.org"/>
     <con:map name="Dummy-SAML-HTML"/>
     <con:map name="Dummy-SAML"/>
+    <con:map name="urn:Federation:MicrosoftOnline"/>
 </con:config>

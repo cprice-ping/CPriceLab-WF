@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c2c:c2cContract id="5WoD7KpG83dGn8GY" name="Default AD Contract" xmlns:c2c="http://pingidentity.com/2014/10/c2cContracts">
+    <c2c:extendedAttributes>
+        <c2c:attr name="ms-ds-ConsistencyGuid"/>
+        <c2c:attr name="userPrincipalName"/>
+    </c2c:extendedAttributes>
+</c2c:c2cContract>

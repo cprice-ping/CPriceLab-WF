@@ -11,9 +11,9 @@
         <urn:Field name="Enable 'This is My Device'">false</urn:Field>
         <urn:Field name="Change Password Email Notification">false</urn:Field>
         <urn:Field name="Show Password Expiring Warning">true</urn:Field>
-        <urn:Field name="Password Reset Type">NONE</urn:Field>
+        <urn:Field name="Password Reset Type">PingID</urn:Field>
         <urn:Field name="Password Reset Policy Contract"/>
-        <urn:Field name="Account Unlock">false</urn:Field>
+        <urn:Field name="Account Unlock">true</urn:Field>
         <urn:Field name="Local Identity Profile"/>
         <urn:Field name="Notification Publisher"/>
         <urn:Field name="Enable Username Recovery">false</urn:Field>
@@ -42,7 +42,7 @@
         <urn:Field name="Account Unlock Template">account-unlock.html</urn:Field>
         <urn:Field name="OTP Length">8</urn:Field>
         <urn:Field name="OTP Time to Live">10</urn:Field>
-        <urn:Field name="PingID Properties"/>
+        <urn:Field name="PingID Properties">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiI5LjMuMS4xIiwiemlwIjoiREVGIn0..beCdsYt-LlAIH55LWW0uxQ.Bx5FNiWRaBIqf_k0kg9hAdM1s-hV1kDfB4Fw-r3vVpZU-P71_S6YY4DOK0qZ3rVRg7fncTCcX9XnKVA7tF2bzlvCJ5QVMlg_-vD_xDIYJQUsl6qbX-8pS8rRDNnovwTsPn-sA580TfLlz9wQ8VuJ6ftNqWzPm-S7Gu_Cy_bgdFXvZC73QZkISIUlcLEw65YcZ6FCnxmfVtvgi05gMBExJI7YJTmBLEzp4HtgG6awo4SE_qVfxhCrw9pKiifmxaLA1H5CEIHppvuFSXwnKQHIxF57ORuQ5QPNuYRNLJyiQXbBgKrbDjDkNh3MwHmD8u7VORqfXcgOQ82lRBNU8b-2C2cEOdm2L3-g0hJCtAOGAvz-dqDiVwUHiHjdUHdcC4fGUhvTkRMpp4hWzxxJLiRMD4Xucs5SJzWHd6iBurdJy3U.TEKQlv0agg-vK91CY2kW4w</urn:Field>
         <urn:Field name="Require Verified Email">false</urn:Field>
         <urn:Field name="Username Recovery Template">username.recovery.template.html</urn:Field>
         <urn:Field name="Username Recovery Info Template">username.recovery.info.template.html</urn:Field>
@@ -78,7 +78,7 @@
         <urn:Field name="Account Unlock Template">account-unlock.html</urn:Field>
         <urn:Field name="OTP Length">8</urn:Field>
         <urn:Field name="OTP Time to Live">10</urn:Field>
-        <urn:Field name="PingID Properties"/>
+        <urn:Field name="PingID Properties">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiI5LjMuMS4xIiwiemlwIjoiREVGIn0..beCdsYt-LlAIH55LWW0uxQ.Bx5FNiWRaBIqf_k0kg9hAdM1s-hV1kDfB4Fw-r3vVpZU-P71_S6YY4DOK0qZ3rVRg7fncTCcX9XnKVA7tF2bzlvCJ5QVMlg_-vD_xDIYJQUsl6qbX-8pS8rRDNnovwTsPn-sA580TfLlz9wQ8VuJ6ftNqWzPm-S7Gu_Cy_bgdFXvZC73QZkISIUlcLEw65YcZ6FCnxmfVtvgi05gMBExJI7YJTmBLEzp4HtgG6awo4SE_qVfxhCrw9pKiifmxaLA1H5CEIHppvuFSXwnKQHIxF57ORuQ5QPNuYRNLJyiQXbBgKrbDjDkNh3MwHmD8u7VORqfXcgOQ82lRBNU8b-2C2cEOdm2L3-g0hJCtAOGAvz-dqDiVwUHiHjdUHdcC4fGUhvTkRMpp4hWzxxJLiRMD4Xucs5SJzWHd6iBurdJy3U.TEKQlv0agg-vK91CY2kW4w</urn:Field>
         <urn:Field name="Require Verified Email">false</urn:Field>
         <urn:Field name="Username Recovery Template">username.recovery.template.html</urn:Field>
         <urn:Field name="Username Recovery Info Template">username.recovery.info.template.html</urn:Field>
@@ -91,19 +91,19 @@
     <urn:Tables>
         <urn:Table name="Credential Validators">
             <urn:Row>
-                <urn:Field name="Password Credential Validator Instance">PDPCV</urn:Field>
+                <urn:Field name="Password Credential Validator Instance">AD</urn:Field>
             </urn:Row>
         </urn:Table>
     </urn:Tables>
     <urn:ExtendedContractAttributes>
-        <urn:AttributeName>entryUUID</urn:AttributeName>
-        <urn:AttributeName>mail</urn:AttributeName>
+        <urn:AttributeName>ms-ds-ConsistencyGuid</urn:AttributeName>
+        <urn:AttributeName>userPrincipalName</urn:AttributeName>
     </urn:ExtendedContractAttributes>
     <urn:UniqueKeyField>username</urn:UniqueKeyField>
     <urn:AttributeMapping>
-        <urn1:AttributeMap Name="entryUUID" Type="Adapter" Value="entryUUID" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
-        <urn1:AttributeMap Name="mail" Type="Adapter" Value="mail" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:AttributeMap Name="policy.action" Type="Adapter" Value="policy.action" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="ms-ds-ConsistencyGuid" Type="Adapter" Value="ms-ds-ConsistencyGuid" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="userPrincipalName" Type="Adapter" Value="userPrincipalName" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:AttributeMap Name="username" Type="Adapter" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
     </urn:AttributeMapping>

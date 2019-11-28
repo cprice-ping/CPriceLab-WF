@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:TokenProcessorConfiguration isInheritAttributeSettings="false" maskOgnlValues="false" isInheritExtendedContractAttributes="false" name="Kerberos TP" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
+    <urn:Fields>
+        <urn:Field name="Domain/Realm Name">KERB-F9A73590DF17006D3396913F29040F12B93992E5</urn:Field>
+    </urn:Fields>
+    <urn:AdvancedFields/>
+    <urn:Tables/>
+</urn:TokenProcessorConfiguration>

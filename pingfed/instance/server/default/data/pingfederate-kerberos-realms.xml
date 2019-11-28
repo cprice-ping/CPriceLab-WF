@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ker:KerberosRealmsSettings xmlns:ker="http://pingidentity.com/2012/01/kerberos-realms">
+    <ker:KerberosRealms>
+        <ker:KerberosRealm id="KERB-F9A73590DF17006D3396913F29040F12B93992E5">
+            <ker:kerberosRealmName>cpricedomain.net</ker:kerberosRealmName>
+            <ker:keyDistributionCenters>
+                <ker:keyDistributionCenter>10.101.42.89</ker:keyDistributionCenter>
+                <ker:keyDistributionCenter>10.101.35.0</ker:keyDistributionCenter>
+            </ker:keyDistributionCenters>
+            <ker:kerberosUsername>pingsvc</ker:kerberosUsername>
+            <ker:kerberosPassword>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiI5LjMuMS4xIn0..63HnwCYnIwi0ySmgQX9CBQ.ZjAsfqpcLCh-VM_lgGYI1w.pJDgx0BegzPTgkHTfwK5gQ</ker:kerberosPassword>
+            <ker:suppressDomainNameConcatenation>true</ker:suppressDomainNameConcatenation>
+        </ker:KerberosRealm>
+    </ker:KerberosRealms>
+    <ker:KdcTimeout>3000</ker:KdcTimeout>
+    <ker:KdcRetries>3</ker:KdcRetries>
+    <ker:ForceTcp>false</ker:ForceTcp>
+    <ker:Debug>false</ker:Debug>
+</ker:KerberosRealmsSettings>
