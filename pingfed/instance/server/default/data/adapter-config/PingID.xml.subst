@@ -2,15 +2,15 @@
 <urn:AdapterConfiguration authnCtxClassRef="" isInheritAttributeSettings="false" isInheritAttributeMapping="false" maskOgnlValues="false" isInheritExtendedContractAttributes="false" name="PingID" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
     <urn:Fields>
         <urn:Field name="PingID Properties">${PID_BASE64}</urn:Field>
-        <urn:Field name="LDAP Data source"/>
+        <urn:Field name="LDAP Data source">LDAP-0931A356B7FC05D4CAE3E2BCD115CAB06BF021A5</urn:Field>
         <urn:Field name="Query Directory">false</urn:Field>
-        <urn:Field name="Base Domain"/>
-        <urn:Field name="Filter"/>
+        <urn:Field name="Base Domain">${USER_BASE_DN}</urn:Field>
+        <urn:Field name="Filter">(|(sAMAccountName=${_DOLLAR_}{username})(userPrincipalName=${_DOLLAR_}{username}))</urn:Field>
         <urn:Field name="LDAP Search Scope">3</urn:Field>
-        <urn:Field name="fname attribute"/>
-        <urn:Field name="lname attribute"/>
-        <urn:Field name="email attribute"/>
-        <urn:Field name="group attribute"/>
+        <urn:Field name="fname attribute">givenName</urn:Field>
+        <urn:Field name="lname attribute">sn</urn:Field>
+        <urn:Field name="email attribute">mail</urn:Field>
+        <urn:Field name="group attribute">memberOf</urn:Field>
         <urn:Field name="phone attribute"/>
         <urn:Field name="YubiKey attribute"/>
         <urn:Field name="Secondary email attribute"/>
@@ -20,7 +20,7 @@
         <urn:Field name="Authentication During Errors">REJECT</urn:Field>
         <urn:Field name="Users without a paired device">block</urn:Field>
         <urn:Field name="LDAP Data Source For Devices"/>
-        <urn:Field name="Create entry for devices"/>
+        <urn:Field name="Create entry for devices">false</urn:Field>
         <urn:Field name="Encryption Key For Devices"/>
         <urn:Field name="Distinguished Name Pattern"/>
         <urn:Field name="HTML Template">pingid.offline.auth.login.template.html</urn:Field>
@@ -30,15 +30,15 @@
         <urn:Field name="Require PingID Registration">false</urn:Field>
     </urn:Fields>
     <urn:AdvancedFields>
-        <urn:Field name="LDAP Data source"/>
+        <urn:Field name="LDAP Data source">LDAP-0931A356B7FC05D4CAE3E2BCD115CAB06BF021A5</urn:Field>
         <urn:Field name="Query Directory">false</urn:Field>
-        <urn:Field name="Base Domain"/>
-        <urn:Field name="Filter"/>
+        <urn:Field name="Base Domain">${USER_BASE_DN}</urn:Field>
+        <urn:Field name="Filter">(|(sAMAccountName=${_DOLLAR_}{username})(userPrincipalName=${_DOLLAR_}{username}))</urn:Field>
         <urn:Field name="LDAP Search Scope">3</urn:Field>
-        <urn:Field name="fname attribute"/>
-        <urn:Field name="lname attribute"/>
-        <urn:Field name="email attribute"/>
-        <urn:Field name="group attribute"/>
+        <urn:Field name="fname attribute">givenName</urn:Field>
+        <urn:Field name="lname attribute">sn</urn:Field>
+        <urn:Field name="email attribute">mail</urn:Field>
+        <urn:Field name="group attribute">memberOf</urn:Field>
         <urn:Field name="phone attribute"/>
         <urn:Field name="YubiKey attribute"/>
         <urn:Field name="Secondary email attribute"/>
@@ -48,7 +48,7 @@
         <urn:Field name="Authentication During Errors">REJECT</urn:Field>
         <urn:Field name="Users without a paired device">block</urn:Field>
         <urn:Field name="LDAP Data Source For Devices"/>
-        <urn:Field name="Create entry for devices"/>
+        <urn:Field name="Create entry for devices">false</urn:Field>
         <urn:Field name="Encryption Key For Devices"/>
         <urn:Field name="Distinguished Name Pattern"/>
         <urn:Field name="HTML Template">pingid.offline.auth.login.template.html</urn:Field>

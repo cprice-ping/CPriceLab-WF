@@ -12,6 +12,7 @@
      password to that particular key.-->
     <map name="DsigPrivateKeyPasswords">
         <item name="v8m5h9qrw85dgmndgv47k76xz">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiI5LjIuMC4xMCJ9..lnQoasV2J29-6KtVWlIWLQ.5of9PpT1aJtyrjWAX_LTz3SfghNxIFBLmU8_8tne0rU.FL732jjTyz1sTcAu9Msi2A</item>
+        <item name="807s3su3bjlvqrai743v9rrer">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiI5LjMuMi4xIn0..EfxUfwskGYr-lPsc-4NSfQ.cSElX4Bi4JL03iREznBN9C1kFmWzbYYAqmsgvxLhQbU.2gohUgswJGrU1ldDegkE9g</item>
     </map>
     <!--DSIG HSM Keystore information: name and password-->
     <item name="DsigHSMKeystoreName">ping-dsig.hsmks</item>
@@ -56,7 +57,7 @@
          to the alias of a private key and the value of the item is the
          password to that particular key-->
     <map name="SslServerPrivateKeyPasswords">
-        <item name="t9vezrmnn5ntdoq6bzfzbtg0j">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiI5LjIuMi4wIn0..PmClS5RqF0WD30fyGahbsw.5Sq6ky_fgrz2tcYXQVH0_8lLYGlXKYNQb4Qre07dr2Y.mqQ9H-1qbys8hnHAtzyzVw</item>
+        <item name="mvo4rv5rr803wxfxqcr29fmht">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiI5LjMuMi4xIn0..MsUBhT3AhHj0deQxiXT1kQ.HlKJcjRhGKJN-s4oqzFUkuES30LILntTvzoCmUq9UK4.LOC6evncXAxKSUg0DBZPvA</item>
     </map>
     <!--SSL HSM Server Keystore information: name and password-->
     <item name="SslServerHSMKeystoreName">ping-ssl-server.hsmks</item>
@@ -89,7 +90,7 @@
     <item name="TrustHSMKeystoreType2">default</item>
     <!--General keystore information: name and password-->
     <item name="GeneralKeystoreName">ping-general.jks</item>
-    <item name="GeneralKeystorePassword"/>
+    <item name="GeneralKeystorePassword">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiI5LjMuMi4xIn0..0NpHjxb_mDZcIrsUTHFMQQ.g-44_HPoWcDa7CB7W-B86dixUbSMoWtVqjvS-2ykf1c.-sGxlTPrYqUpg_3iX4fPiA</item>
     <!--Do not modify-->
     <item name="GeneralKeystoreType2">default</item>
     <!--Map of General keystore aliases to passwords; the system uses this map
@@ -97,7 +98,9 @@
      authentication, etc. For each item, the name of the item maps
      to the alias of a private key, and the value of the item is the
      password to that particular key.-->
-    <map name="GeneralPrivateKeyPasswords"/>
+    <map name="GeneralPrivateKeyPasswords">
+        <item name="3v5wv4vz3xtwlvl15gafec56o">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRW1JY1UxOVdueSIsInZlcnNpb24iOiI5LjMuMi4xIn0..-Ug4jxNo85_VHQHlXMD_mA.Z1e3E_RfnusRtybWDZA3jJF7mk6bIy0vqr1oZz_EtfU.g0mcw_ijB19kvjjpyHbChQ</item>
+    </map>
     <!--General HSM keystore information: name and password-->
     <item name="GeneralHSMKeystoreName">ping-general.hsmks</item>
     <item name="GeneralHSMKeystorePassword"/>

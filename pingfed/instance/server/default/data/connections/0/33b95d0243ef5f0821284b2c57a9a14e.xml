@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<md:EntityDescriptor entityID="urn:Federation:MicrosoftOnline" urn:name="AzureAD" ID="Rtqfdnd5iP5.Omkh9n3G8_yorGo" urn:LogLevel="STANDARD" urn:isActive="true" xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:urn="urn:sourceid.org:saml2:metadata-extension:v2">
+<md:EntityDescriptor entityID="urn:federation:MicrosoftOnline" urn:name="AzureAD" ID="Rtqfdnd5iP5.Omkh9n3G8_yorGo" urn:LogLevel="STANDARD" urn:isActive="true" xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:urn="urn:sourceid.org:saml2:metadata-extension:v2">
     <md:Extensions>
-        <urn:EntityExtension PFVersion="9.3.1.1" LicenseGroup="">
+        <urn:EntityExtension PFVersion="9.3.2.1" LicenseGroup="">
+            <urn:VirtualIdentity EntityID="http://cpricedomain.net/PingFederate"/>
+            <urn:DefaultVirtualIdentity EntityID="http://cpricedomain.net/PingFederate"/>
             <urn:DigitialSignatureAliases SigningKeyAlias="v8m5h9qrw85dgmndgv47k76xz" includeX509inXmlSig="true" includeRawKeyInXmlSig="false" SigningAlgorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
             <urn:Encryption>
                 <urn:EncryptionPolicy EncryptionAlgorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc" KeyTransportAlgorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p" EncryptAssertion="false" EncryptSubjectNameID="false" SLOEncryptSubjectNameID="false"/>
@@ -15,12 +17,12 @@
                 <urn:AllowAllEntities>false</urn:AllowAllEntities>
                 <urn:AdditionalAllowedEntities/>
             </urn:AdditionalAllowedEntitiesConfiguration>
-            <urn:ExtendedProperties name="authnExp" value="SupportsMFA"/>
+            <urn:ExtendedProperties name="authnExp" value="Basic"/>
         </urn:EntityExtension>
     </md:Extensions>
     <md:SPSSODescriptor protocolSupportEnumeration="WSFED" AuthnRequestsSigned="false" WantAssertionsSigned="false" SignResponseAsRequired="false">
         <md:Extensions>
-            <urn:RoleExtension ArtifactTimeoutSeconds="60" LastModified="2019-11-27T23:22:29.952Z">
+            <urn:RoleExtension ArtifactTimeoutSeconds="60" LastModified="2019-11-29T18:58:29.565Z">
                 <urn:IncomingBindings Artifact="true" POST="true" Redirect="true" SOAP="true"/>
                 <urn:EnabledProfiles IDPInitiatedSSO="true" IDPInitiatedSLO="true" SPInitiatedSSO="true" SPInitiatedSLO="true"/>
                 <urn:SP AssertionValidityAfterMinutes="5" AssertionValidityBeforeMinutes="5" ConnectionTargetType="Standard" EnableCDCDuringSSO="false">
@@ -48,16 +50,16 @@
         <md:AssertionConsumerService index="1" Location="https://login.microsoftonline.com/login.srf" Binding="wsfed:prp:http:post" isDefault="true"/>
         <md:AttributeConsumingService index="0">
             <md:ServiceName xml:lang="en">AttributeContract</md:ServiceName>
-            <md:RequestedAttribute Name="UPN" NameFormat="http://schemas.microsoft.com/LiveID/Federation/2008/05"/>
-            <md:RequestedAttribute Name="ImmutableID" NameFormat="http://schemas.xmlsoap.org/claims"/>
+            <md:RequestedAttribute Name="UPN" NameFormat="http://schemas.xmlsoap.org/claims"/>
+            <md:RequestedAttribute Name="ImmutableID" NameFormat="http://schemas.microsoft.com/LiveID/Federation/2008/05"/>
         </md:AttributeConsumingService>
     </md:SPSSODescriptor>
     <md:RoleDescriptor protocolSupportEnumeration="WSFED" xsi:type="urn:PFSpWsTrustRoleDescriptorType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <md:Extensions>
-            <urn:RoleExtension LastModified="2019-11-27T23:22:29.952Z"/>
+            <urn:RoleExtension LastModified="2019-11-29T18:58:29.565Z"/>
         </md:Extensions>
         <urn:WsTrustSettings>
-            <urn:AppliesTo>urn:Federation:MicrosoftOnline</urn:AppliesTo>
+            <urn:AppliesTo>urn:federation:MicrosoftOnline</urn:AppliesTo>
             <urn:TokenType>http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1O365</urn:TokenType>
             <urn:UseSamlHoK>false</urn:UseSamlHoK>
             <urn:AbortIfNotFulfilledFromRequest>false</urn:AbortIfNotFulfilledFromRequest>
@@ -73,8 +75,8 @@
                 </urn:AttributeMapping>
             </urn:TokenToAssertionMapping>
             <urn:ExtendedAttributeContract>
-                <urn:ExtendedAttribute AttributeName="UPN" MaskValue="false" Namespace="ns:unspecified"/>
-                <urn:ExtendedAttribute AttributeName="ImmutableID" MaskValue="false" Namespace="ns:unspecified"/>
+                <urn:ExtendedAttribute AttributeName="UPN" MaskValue="false" Namespace="http://schemas.xmlsoap.org/claims"/>
+                <urn:ExtendedAttribute AttributeName="ImmutableID" MaskValue="false" Namespace="http://schemas.microsoft.com/LiveID/Federation/2008/05"/>
             </urn:ExtendedAttributeContract>
             <urn:enableOAuthSamlBearer>false</urn:enableOAuthSamlBearer>
         </urn:WsTrustSettings>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:config xmlns:con="http://www.sourceid.org/2004/05/config">
+    <con:item name="ApplicationDockEndpoint">https://desktop.pingone.com/cpricelab</con:item>
+    <con:item name="ProvisioningBaseUrl">https://scim.connect.pingidentity.com/prov-service</con:item>
+    <con:item name="KeyPairAlias">3v5wv4vz3xtwlvl15gafec56o</con:item>
+    <con:item name="ClientId">01ac2e9d-6eb4-43a6-9549-53770fb772a1</con:item>
+    <con:item name="AccountId">c6d8cf58-6d78-49da-938a-4fb44f746397</con:item>
+    <con:item name="CompanyName">cprice+lab@pingidentity.com</con:item>
+    <con:item name="Associated">true</con:item>
+</con:config>
