@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:config xmlns:con="http://www.sourceid.org/2004/05/config">
-    <con:map name="docker"/>
-    <con:map name="https://httpbin.org"/>
-    <con:map name="Dummy-SAML-HTML"/>
-    <con:map name="Dummy-SAML"/>
-    <con:map name="urn:Federation:MicrosoftOnline"/>
     <con:map name="http://pingone.com/c6d8cf58-6d78-49da-938a-4fb44f746397"/>
     <con:map name="HTTPBIN-SAML"/>
     <con:map name="urn:federation:MicrosoftOnline"/>
