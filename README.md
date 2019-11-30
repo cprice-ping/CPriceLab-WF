@@ -9,7 +9,6 @@ It is designed to be used in conjunction with my PD-Base Profile (https://github
 * PF Admin Console credentials
 
 ## **Configuration**
------
 
 ![CPriceLab Architecture](CPriceLab%20-%20WF.png)
 
@@ -40,8 +39,8 @@ The PingID adapter uses the secrets from your PingID tenant to create the proper
 
 For this Profile, you can place the `base64` encoded text from a `pingid.properties` file that will be placed into the PingID Adapter settings -- use the `env_var` variable of `PID_BASE64`
 
-### **Sessions**  
 -----
+### **Sessions**  
 Sessions and Policies are also being used to demonstrate reduced user interaction for authentication (not necessary for `Passwordless`):  
 
 * HTML Form (within the same Browser) -- Persistant Session for 7 days
@@ -55,8 +54,8 @@ The User experience of this should be that:
 * Every week, a full Username \ Password is required
 * Every day, an interactive response to PingID is required
 
-### **Applications on PingFed**
 -----
+### **Applications on PingFed**
 **SAML -- HTTPBIN**  
 https://${PF_BASE_URL}/idp/startSSO.ping?PartnerSpId=HTTPBIN-SAML
 
