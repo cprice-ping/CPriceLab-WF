@@ -41,6 +41,20 @@ Authentication API
 * `Passwordless` (ID-First --> PingID)
 * _Anything Else_ (AuthN API Explorer)
 
+### Sessions  
+Sessions and Policies are also being used to demonstrate reduced user interaction for authentication (not necessary for `Passwordless`):  
+
+* HTML Form (within the same Browser) -- Persistant Session for 7 days
+* PingID -- **always** triggers, but PingID Policy configured to watch for:
+  * New Device (requires PingID App OTP) 
+  * Med / Hig risk IP Address
+  * Geo-velocity checking
+  * Recent Authentication -- 12 hrs
+
+The User experience of this should be that:  
+* Every week, a full Username \ Password is required
+* Every day, an interactive response to PingID is required
+
 ### Applications
 **SAML -- HTTPBIN**  
 https://${PF_BASE_URL}/idp/startSSO.ping?PartnerSpId=HTTPBIN-SAML
