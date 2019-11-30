@@ -10,7 +10,6 @@ It is designed to be used in conjunction with my PD-Base Profile (https://github
 
 ## Configuration
 
-**Architecture**  
 ![CPriceLab Architecture](CPriceLab%20-%20WF.png)
 
 This configuration includes:
