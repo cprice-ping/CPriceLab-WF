@@ -11,7 +11,7 @@ It is designed to be used in conjunction with my PD-Base Profile (https://github
 ## Configuration
 
 **Architecture**  
-![CPriceLab Architecture](https://github.com/cprice-ping/CPriceLab-WF/blob/master/CPriceLab%20-%20WF.png)
+![CPriceLab Architecture](CPriceLab%20-%20WF.png)
 
 This configuration includes:
 
@@ -50,3 +50,5 @@ This is where most SP Connections are managed
 
 **WSFed -- AzureAD \ O365**  
 https://login.microsoftonline.com?whr=cpricedomain.net
+
+My AzureAD Tenant is configured to use the *SupportsMFA* flag, and so PingFed is responsible for **any** MFA requests that AzureAD requires
