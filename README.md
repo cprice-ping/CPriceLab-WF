@@ -47,7 +47,7 @@ Sessions and Policies are also being used to demonstrate reduced user interactio
 * HTML Form (within the same Browser) -- Persistant Session for 7 days
 * PingID -- **always** triggers, but PingID Policy configured to watch for:
   * New Device (requires PingID App OTP) 
-  * Med / Hig risk IP Address
+  * Med / High risk IP Address
   * Geo-velocity checking
   * Recent Authentication -- 12 hrs
 
