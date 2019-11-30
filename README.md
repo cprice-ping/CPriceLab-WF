@@ -1,22 +1,17 @@
-This profile is the configuration for CPriceLab - Workforce use cases
+This profile is the configuration for CPriceLab - Workforce use cases.  
+
+On my host, after the initial Profile is pulled for the first time, I mount it as a volume so that it remains updated with any changes made to the configuration (i.e. not stored and pulled from GitHub). This is to show a common deployment method (Containers) using legacy configuration (Pets).
 
 It is designed to be used in conjunction with my PD-Base Profile (https://github.com/cprice-ping/PD-Base), with PD being used for:  
 * OAuth Clients
 * OAuth Persistant Grants
 * Authentication Sessions
-
-## Deployment
-* Copy the `docker-compose.yaml` and `env_vars` files to a folder
-* Modify the `env_vars` file to match your environment
-* Launch the stack with `docker-compose up -d`
+* PF Admin Console credentials
 
 ## Configuration
 
-To access the Admin UI for PF go to:  
-https://{{PF_HOSTNAME}}:9999/pingfederate
-
-Credentials:  
-`Administrator` / `2FederateM0re`
+**Architecture**  
+![CPriceLab Architecture](https://github.com/cprice-ping/CPriceLab-WF/blob/master/CPriceLab%20-%20WF.png)
 
 This configuration includes:
 
@@ -47,11 +42,11 @@ Authentication API
 * _Anything Else_ (AuthN API Explorer)
 
 ### Applications
-**SAML -- Generic App**  
-https://${PF_BASE_URL}/idp/startSSO.ping?PartnerSpId=Dummy-SAML
+**SAML -- HTTPBIN**  
+https://${PF_BASE_URL}/idp/startSSO.ping?PartnerSpId=HTTPBIN-SAML
 
 **SAML -- PingOne for Enterprise**  
-https://${PF_BASE_URL}/idp/startSSO.ping?PartnerSpId=Dummy-SAML
+This is where most SP Connections are managed  
 
 **WSFed -- AzureAD \ O365**  
 https://login.microsoftonline.com?whr=cpricedomain.net
