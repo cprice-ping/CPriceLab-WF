@@ -1,6 +1,14 @@
 version: "3"
 
 services:
+  torproxy:
+    image: dperson/torproxy
+    ports:
+      - 8118:8118
+      - 9050:9050
+    networks:
+      - pingnet-dmz
+      
   pingfederate:
     image: pingidentity/pingfederate:edge
     command: wait-for pingdirectory:389 -t 300 -- entrypoint.sh start-server
