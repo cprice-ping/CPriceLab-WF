@@ -54,7 +54,13 @@ The User experience of this should be that:
 * Every week, a full Username \ Password is required
 * Every day, an interactive response to PingID is required
 
------
+---
+### PingID IP Reputation demo
+In order to demonstrate the IP Reputation capability of PingID, the `docker-compose.yaml` includes a service for **Tor Privoxy**.  
+
+To use this service, configure your Browser settings to use the `SOCKS v5` protocol on `${Docker Host}:9050` and connect to a PF \ P14E application that is using MFA.
+
+---
 ### **Applications on PingFed**
 **SAML -- HTTPBIN**  
 https://${PF_BASE_URL}/idp/startSSO.ping?PartnerSpId=HTTPBIN-SAML
